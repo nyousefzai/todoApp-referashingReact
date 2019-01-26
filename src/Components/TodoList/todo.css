@@ -1,0 +1,35 @@
+.main {
+    margin: 100px;
+    height: 100%;
+}
+
+.textinput {
+    padding: 10px;
+    font-size: medium;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #06ad8f;
+    width: 80px;
+    margin-left: 40px;
+    font-size: medium;
+}
+
+.mytodolist {
+    list-style-type: none;
+    background-color: yellow;
+    width: 270px;
+    padding: 15px;
+    text-align: center;
+    margin: 30px -35px;
+}
+
+.mytodolistdon {
+    list-style-type: none;
+    width: 270px;
+    padding: 15px;
+    text-align: center;
+    background-color: #00FF98;
+    margin: 30px -35px;
+}
