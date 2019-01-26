@@ -17,12 +17,15 @@ class Todo extends Component {
     
   }
 
-hunndleInput (event)  {
-  if(event.target.value !== ''){
-    this.setState({ currentIteam: event.target.value })
-  }
 
-}
+  hunndleInput (event) {
+  const { name, value } = event.target;
+  this.setState({
+    [name]: value
+  });
+};
+
+
 
 hunddleSubmit (event) {
 event.preventDefault();
@@ -49,6 +52,7 @@ this.setState({
            placeholder="Add your task "
            className='textinput'
            type="text"
+           name="currentIteam"
            value={this.state.currentIteam}
            onChange={this.hunndleInput}
            ></input>
