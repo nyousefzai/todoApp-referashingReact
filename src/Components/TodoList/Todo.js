@@ -12,9 +12,9 @@ class Todo extends Component {
 }
 
     this.hunddleSubmit = this.hunddleSubmit.bind(this)
-    this.hunndleInput = this.hunndleInput.bind(this)
-    this.removeItem = this.removeItem.bind(this)
-    this.crossFont = this.crossFont.bind(this)
+    this.hunndleInput  = this.hunndleInput.bind(this)
+    this.removeItem    = this.removeItem.bind(this)
+    this.crossFont     = this.crossFont.bind(this)
     
   }
 
