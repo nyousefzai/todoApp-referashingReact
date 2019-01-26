@@ -10,7 +10,10 @@ class List extends Component {
             <div>
                     <ul>
                         {
-                        this.props.items.map((item, index) => <li onClick={() => this.props.removeItem(index)} className='mytodolist' key={index}>{item}</li>)
+                        this.props.items.map((item, index) => <li className='mytodolist' key={index}>{item}
+                            <span onClick={() => this.props.removeItem(index)} className='close'>x</span>
+                            
+                            </li>)
                         }
                     </ul>
             </div>
