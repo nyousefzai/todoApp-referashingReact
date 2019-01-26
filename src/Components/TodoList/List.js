@@ -3,19 +3,21 @@ import  './todo.css'
 
 class List extends Component {
  
+ childLi = ()=>{
+    return <ul className="unorder_list">
+        {
+            this.props.items.map((item, index) => <li className='mytodolist' key={index}>{item}
+                <span onClick={() => this.props.removeItem(index)} className='close'>x</span>
 
+            </li>)
+        }
+    </ul>
+}
 
     render() {
         return (
             <div>
-                    <ul>
-                        {
-                        this.props.items.map((item, index) => <li className='mytodolist' key={index}>{item}
-                            <span onClick={() => this.props.removeItem(index)} className='close'>x</span>
-                            
-                            </li>)
-                        }
-                    </ul>
+                 {this.childLi()} 
             </div>
         )
     }

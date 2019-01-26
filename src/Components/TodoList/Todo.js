@@ -14,6 +14,7 @@ class Todo extends Component {
     this.hunddleSubmit = this.hunddleSubmit.bind(this)
     this.hunndleInput = this.hunndleInput.bind(this)
     this.removeItem = this.removeItem.bind(this)
+    this.crossFont = this.crossFont.bind(this)
     
   }
 
@@ -43,9 +44,18 @@ this.setState({
   }
 
 
+  crossFont(index) {
+    const todoList = this.state.todoList.map((list,nodeIndex) => {
+      return nodeIndex !== index;
+    })
+    this.setState({todoList})
+  }
+
+
   render() {
     return (
       <div className='main'>
+      <div className='input_Box'>
           <p> Tasks </p>
            <div className="todolist">
            <input 
@@ -58,7 +68,9 @@ this.setState({
            ></input>
            <button onClick={this.hunddleSubmit} className='btn'> add </button>
         </div>
-        <List items={this.state.todoList} removeItem={this.removeItem}/>
+        
+      </div>
+      <List items={this.state.todoList} removeItem={this.removeItem} crossFont={this.crossFont}/>
       </div>
     )
   }

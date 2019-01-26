@@ -3,6 +3,16 @@
     height: 100%;
 }
 
+.input_Box {
+    margin: 0 0 94px 71px;
+}
+
+@media only screen and (max-width:400px) {
+    .input_Box {
+        margin-left: -44px
+    }
+}
+
 .textinput {
     padding: 10px;
     font-size: medium;
@@ -17,17 +27,25 @@
 }
 
 .mytodolist {
+    float: left;
+    font-size: 40px;
     position: relative;
     list-style-type: none;
     background-color: yellow;
     width: 219px;
     height: 169px;
-    padding: 15px;
+    padding: 25px 15px;
     text-align: center;
-    margin: 30px -35px;
+    margin: 30px 0px 30px 30px;
+    font-family: 'Just Another Hand', cursive;
+    /* text-decoration: line-through; */
 }
 
+
+/* this one is on hold for noe*/
+
 .mytodolistdon {
+    float: left;
     list-style-type: none;
     width: 270px;
     padding: 15px;
@@ -40,13 +58,18 @@
     cursor: pointer;
     position: absolute;
     float: right;
-    top: -9px;
+    top: -5px;
     right: 5px;
     font-size: 30px;
-    transition: font-size 0.1s, font-weight 0.1s;
+    transition: font-size 0.1s, font-weight 0.1s, color 0.1s;
 }
 
 .close:hover {
     font-size: 40px;
     font-weight: bold;
+    color: red;
+}
+
+.clearfix {
+    clear: both
 }
