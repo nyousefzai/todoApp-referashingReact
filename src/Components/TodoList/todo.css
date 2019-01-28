@@ -19,6 +19,7 @@
     }
     
     .btn {
+        outline: none;
         padding: 10px;
         background-color: #06ad8f;
         width: 80px;
@@ -74,4 +75,35 @@
     
     input {
         outline: none;
+    }
+    
+    .editbtn {
+        cursor: pointer;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        font-family: monospace;
+        font-size: 15px;
+    }
+    
+    .editbtn:hover {
+        font-size: 18px;
+        font-weight: bold;
+        color: #FF7300;
+    }
+    
+    .todo_item_list {
+        display: block;
+    }
+    
+    .todo_item_list_hide {
+        display: none;
+    }
+    
+    .editing {
+        display: none;
+    }
+    
+    .editing_true {
+        display: block;
     }
