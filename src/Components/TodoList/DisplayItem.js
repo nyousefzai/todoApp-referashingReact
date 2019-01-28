@@ -5,17 +5,32 @@ export default class DisplayItem extends Component {
 
     constructor(props) {
         super(props)
-
         this.state = {
-            IsEditing: false
+            IsEditing: false,
+            EditValue:[]
         }
         this.hunddleEdit = this.hunddleEdit.bind(this)
+        this.handleEditing = this.handleEditing.bind(this)
     }
 
+    
+    componentDidMount() {
+      this.setState({EditValue: [this.props.item]})
+      
+    }
+    
+
     hunddleEdit(e) {
-        console.log('itworks')
         e.preventDefault();
         this.setState({ IsEditing: !this.state.IsEditing});
+    }
+
+
+    handleEditing(e){
+        let newText = e.target.value;
+        this.setState({
+            EditValue:newText
+        })
     }
 
   render() {
@@ -24,16 +39,18 @@ export default class DisplayItem extends Component {
         
                     <li className='mytodolist'>
                            <span className={this.state.IsEditing ? 'todo_item_list_hide' : 'todo_item_list'}>
-                            {item}
+                            {this.state.EditValue}
                         </span>
                         <span onClick={this.hunddleEdit} className="editbtn">
                             edit
                         </span>
-                        <span onClick={() => this.props.removeItem(this.props.index)} className='close'>x</span>
+                        <span onClick={()=> this.props.removeItem(this.props.index)} className='close'>x</span>
                         <input
                             placeholder={item}
                             className={this.state.IsEditing ? 'editing_true' : 'editing'}
                             type="text"
+                            value={this.state.EditValue}
+                            onChange={this.handleEditing}
                         >
                         </input>
                     </li>

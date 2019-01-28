@@ -106,4 +106,7 @@
     
     .editing_true {
         display: block;
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
     }

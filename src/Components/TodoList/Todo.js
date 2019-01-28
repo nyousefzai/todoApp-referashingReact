@@ -37,10 +37,11 @@ this.setState({
 
   removeItem(index) {
     const todoList = this.state.todoList.filter((todoList, todoIndex) => {
-      return todoIndex !== index
+      return todoIndex !== index 
     })
     this.setState({ todoList })
   }
+  
 
 
 
