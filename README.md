@@ -1,8 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+T
+## To Do app for my Resume
 
-In the project directory, you can run:
+Just to Referash React skill
 
 ### `npm start`
 
