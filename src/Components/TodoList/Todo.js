@@ -23,14 +23,16 @@ class Todo extends Component {
   this.setState({
     [name]: value
   });
+
 };
 
 
 
 hunddleSubmit (event) {
 event.preventDefault();
+(this.state.currentIteam === '') ? this.setState({ condition:true}) :
 this.setState({
-  todoList: [...this.state.todoList, this.state.currentIteam], currentIteam: ''
+  todoList: [...this.state.todoList, this.state.currentIteam], currentIteam: '',condition:false
 })
 }
 
@@ -42,18 +44,19 @@ this.setState({
     this.setState({ todoList })
   }
   
+ 
 
 
 
   render() {
     return (
       <div className='main'>
-      <div className='input_Box'>
+      <div>
           <p> Tasks </p>
-           <div className="todolist">
+          <div >
            <input 
            placeholder="Add your task "
-           className='textinput'
+            className= { this.state.condition ? 'textinputgored' : 'textinput' }
            type="text"
            name="currentIteam"
            value={this.state.currentIteam}

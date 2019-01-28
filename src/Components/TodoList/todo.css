@@ -18,6 +18,13 @@
         font-size: medium;
     }
     
+    .textinputgored {
+        padding: 10px;
+        font-size: medium;
+        border-color: #ff0808;
+        border-style: solid;
+    }
+    
     .btn {
         outline: none;
         padding: 10px;
