@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './todo.css';
 
 export default class DisplayItem extends Component {
@@ -34,7 +35,7 @@ export default class DisplayItem extends Component {
     }
 
   render() {
-      let item = this.props.item
+      let item = this.props.items
     return (
         
                     <li className='mytodolist'>
@@ -44,6 +45,7 @@ export default class DisplayItem extends Component {
                         <span onClick={this.hunddleEdit} className="editbtn">
                             edit
                         </span>
+                        <form onSubmit={this.hunddleEdit}> 
                         <span onClick={()=> this.props.removeItem(this.props.index)} className='close'>x</span>
                         <input
                             placeholder={item}
@@ -53,8 +55,16 @@ export default class DisplayItem extends Component {
                             onChange={this.handleEditing}
                         >
                         </input>
+                        </form>
                     </li>
     
     )
   }
 }
+
+
+DisplayItem.propTypes = {
+    removeItem: PropTypes.func.isRequired,
+    item: PropTypes.array.isRequired,
+    index: PropTypes.number.isRequired
+};

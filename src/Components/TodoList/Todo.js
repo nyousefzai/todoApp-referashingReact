@@ -54,6 +54,7 @@ this.setState({
       <div>
           <p> Tasks </p>
           <div >
+            <form onSubmit={this.hunddleSubmit}>
            <input 
            placeholder="Add your task "
             className= { this.state.condition ? 'textinputgored' : 'textinput' }
@@ -61,8 +62,11 @@ this.setState({
            name="currentIteam"
            value={this.state.currentIteam}
            onChange={this.hunndleInput}
+           
            ></input>
            <button onClick={this.hunddleSubmit} className='btn'> add </button>
+            </form>
+           
         </div>
         
       </div>
