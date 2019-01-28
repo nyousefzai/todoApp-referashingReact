@@ -12,7 +12,7 @@ class List extends Component {
                     {
                         this.props.items.map((item, index) => {
                             return(  <DisplayItem 
-                            key={index}
+                            key={item}
                             item={item} 
                             removeItem={this.props.removeItem} 
                             index={index}/>
